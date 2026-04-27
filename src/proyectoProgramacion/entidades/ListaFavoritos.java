@@ -7,13 +7,13 @@ public class ListaFavoritos {
 
 	private int idelist;
 	private int ideusu;
-	private int numeroPelis;
+	private int numeroPelis; // Se puede extrear del size de la list
 	private List<Pelicula> listaPeliculas;
 
 	public ListaFavoritos(int idelist, int ideusu, int numeroPelis) {
 		this.idelist = idelist;
 		this.ideusu = ideusu;
-		this.numeroPelis = numeroPelis;
+		this.numeroPelis = 0;
 		this.listaPeliculas = new LinkedList<Pelicula>();
 	}
 
