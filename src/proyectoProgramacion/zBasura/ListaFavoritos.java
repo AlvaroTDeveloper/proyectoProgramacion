@@ -1,7 +1,9 @@
-package proyectoProgramacion.entidades;
+package proyectoProgramacion.zBasura;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import proyectoProgramacion.entidades.Pelicula;
 
 public class ListaFavoritos {
 

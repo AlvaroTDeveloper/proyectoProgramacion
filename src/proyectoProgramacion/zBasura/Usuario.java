@@ -1,4 +1,4 @@
-package proyectoProgramacion.entidades;
+package proyectoProgramacion.zBasura;
 
 public class Usuario {
 

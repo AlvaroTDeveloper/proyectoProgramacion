@@ -35,9 +35,5 @@ public class Pelicula {
 	public void setArgumento(String argumento) {
 		this.argumento = argumento;
 	}
-	
-	
-	
-	
-	
+
 }
