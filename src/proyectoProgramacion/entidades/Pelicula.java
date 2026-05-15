@@ -1,10 +1,13 @@
 package proyectoProgramacion.entidades;
 
+import java.util.ArrayList;
+
 public class Pelicula {
 
 	private int idepeli;
 	private String nombrepeli;
 	private String argumento;
+	
 
 	public Pelicula(int idepeli, String nombrepeli, String argumento) {
 		this.idepeli = idepeli;
@@ -36,4 +39,8 @@ public class Pelicula {
 		this.argumento = argumento;
 	}
 
+
+
+	
+	
 }

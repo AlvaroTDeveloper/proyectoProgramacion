@@ -1,8 +1,14 @@
 package proyectoProgramacion.da;
 
+import java.sql.CallableStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Types;
 import java.util.ArrayList;
 
+
 import proyectoProgramacion.entidades.Actor;
+import proyectoProgramacion.entidades.Pelicula;
 
 public class ActorDAO extends Conexion implements DAO<Actor,Integer>{ 
 	
@@ -43,4 +49,69 @@ public class ActorDAO extends Conexion implements DAO<Actor,Integer>{
 		return null;
 	}
 
+	
+	
+	
+	
+	
+	public ArrayList<Pelicula> listaPeliculasPorActor (String nombre) {
+		ArrayList<Pelicula> listaPeliculas = new ArrayList<Pelicula>();
+		conectar();
+		CallableStatement stmt;
+		
+		try {
+			stmt = conexion.prepareCall("{call comprobador(?)}");
+			stmt.setString(1, nombre);
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				
+				
+				
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			desconectar();
+		}
+		
+		
+		
+		
+		
+		return listaPeliculas;
+	}
+	
+	
+	
+	
+	
+	private boolean existeActor (String nombre) {
+		boolean resultado = false;
+		conectar();
+		CallableStatement stmt;
+		try {
+			stmt = conexion.prepareCall("{ ? = call comprobador(?)}");
+			stmt.registerOutParameter(1, Types.BOOLEAN);
+			stmt.setString(2, nombre);
+			
+			stmt.execute();
+			
+			resultado = stmt.getBoolean(1);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			desconectar();
+		}
+	
+		return resultado; 
+	}
+	
+	
+	
+	
 }

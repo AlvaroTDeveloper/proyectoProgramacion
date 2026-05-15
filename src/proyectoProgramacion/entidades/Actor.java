@@ -1,5 +1,7 @@
 package proyectoProgramacion.entidades;
 
+import java.util.ArrayList;
+
 public class Actor {
 
 	private int ideActor;
